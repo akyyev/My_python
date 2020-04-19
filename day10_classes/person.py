@@ -4,6 +4,7 @@ from day10_classes.rocket import Rocket
 from day06_OOP_concepts.practice02_inheritance import Bird
 from math import sqrt as square_root
 
+
 class Person:
 
     def __init__(self, name="N/A", date_of_birth="1-1-1995", POB="US", SSN="XXX-XX-1234"):
@@ -15,6 +16,7 @@ class Person:
     def introduce_yourself(self):
         print(f"Hello, my name is {self.name}.")
 
+    @staticmethod
     def static_method():
         print("This is static method")
 
@@ -58,3 +60,14 @@ print(s1.gpa)
 print(Rocket(1, 2))
 print(Bird("Asman").whoisThis())
 print(square_root(10))
+
+
+class Test:
+    __egg = 5  # strongly private field
+    _ball = 3  # protected field
+
+
+t = Test()
+# print(t.__egg) # AttributeError
+print(t._Test__egg)
+print(t._ball)
