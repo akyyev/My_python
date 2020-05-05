@@ -12,3 +12,6 @@ def calendarExamples():
 
 if __name__ == "__main__":
     calendarExamples()
+    pass
+
+print('Value in built variable is:', __name__)
