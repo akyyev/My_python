@@ -6,6 +6,8 @@ ls2 = [1, 2, 3, 4]
 ls3 = ls
 print(ls is ls3)
 
+print(ls is ls2)  # false
+print(ls == ls2)  # true
 
 # unpacking
 coffee, tea, coke = ["dark blend", "herbal", "coca cola"]

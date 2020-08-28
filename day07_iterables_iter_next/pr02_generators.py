@@ -30,7 +30,7 @@ def my_generator():
     yield n
 
     n += 1
-    print(f'This is printed first-{n}')
+    print(f'This is printed second-{n}')
     yield n
 
     n += 1

@@ -8,9 +8,23 @@ class Bird:
     def swim(self):
         print("Swim faster")
 
+    def method(self):
+        print('This is method in Bird class')
+
+
+class Animal:
+    def __init__(self, name):
+        print("{} is ready".format(name))
+
+    def whoisThis(self):
+        print('Animal')
+
+    def method(self):
+        print('This is method in Animal class')
+
 
 # child class
-class Penguin(Bird):
+class Penguin(Animal, Bird):
 
     def __init__(self):
         # call super() function
@@ -25,8 +39,9 @@ class Penguin(Bird):
 
 lemon = Bird("Lemon")
 lemon.whoisThis()
+
 peggy = Penguin()
 peggy.whoisThis()
+peggy.method() # inheritance occurs according to order of super classes
 # peggy.swim()
 # peggy.run()
-

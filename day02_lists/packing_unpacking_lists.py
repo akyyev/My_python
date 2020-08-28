@@ -16,9 +16,9 @@ x, y, z = 1, 2, 3
 # is the SAME as the number of elements in the list.)
 my_list = [10, 20, 30]
 x, y, z = my_list
+print(x, y, z)
 
 # A tuple can also be used
 my_tuple = (1.0, 2.0, 3.0)
 x, y, z = my_tuple
-
-
+print(x, y, z)

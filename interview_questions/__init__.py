@@ -11,7 +11,7 @@ def serialize(inp):
             ls = ls[:-2] + "]"
             return str(ls)
 
-    with open('test.json', 'w') as writer:
+    with open('test2.json', 'w') as writer:
 
         if type(inp) == str:
             writer.write("\"" + inp + "\"")
@@ -32,7 +32,7 @@ def serialize(inp):
             writer.write(res)
 
 
-# serialize('this is a string') -> "this is a string"
+# serialize('this is a string') #-> "this is a string"
 # serialize(5) -> 5
 # serialize([1, 2, 3, 'four', [5, 6]]) -> [1, 2, 3, "four", [5, 6]]
 # serialize({key1: 'value1', key2: [1, 2, 3, 'four', [5, 6]]})
@@ -44,3 +44,13 @@ def serialize(inp):
 serialize('this is a string')
 serialize({'key1': 'value1', 'key2': [1, 2, 3, 'four', [5, 6]], 5: 'five'})
 # serialize(5)
+
+
+def getFactorial(num):
+    if num == 1:
+        return 1
+    else:
+        return num * getFactorial(num - 1)
+
+
+print(getFactorial(6))

@@ -5,7 +5,7 @@
 # Then, the output should be:
 # ['34', '67', '55', '33', '12', '98']
 # ('34', '67', '55', '33', '12', '98')
-from numpy import intp
+# from numpy import intp
 from pip._vendor.distlib.compat import raw_input
 
 
@@ -199,7 +199,7 @@ def special_calc(num):
     print(first + second + third + last)
 
 
-# special_calc(9)
+special_calc(9)
 
 
 

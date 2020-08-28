@@ -18,8 +18,8 @@ except ValueError:
 
 # Exercise
 def retrieve_positive_number():
+    res = -1
     while True:
-        res = -1
         try:
             res = int(input("Enter a positive number: "))
         except ValueError:

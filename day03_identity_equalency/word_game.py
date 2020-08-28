@@ -18,8 +18,11 @@ def get_guess():
         if len(g) > 1:
             print("Your guess must have exactly one character!")
             g = input("Guess: ")
-        elif g.isupper() or g.isdigit():
+        elif g.isupper():
             print("Your guess must be a lowercase letter!")
+            g = input("Guess: ")
+        elif g.isdigit():
+            print("Your guess must be a letter, not a number!")
             g = input("Guess: ")
         else:
             return g
@@ -44,7 +47,7 @@ while True:
     print(str(guesses_left) + " incorrect guesses left.")
     print(dashes)
     if dashes == secret_word:
-        print(f"Congrats! You win. The word was:  {secret_word}")
+        print(f"Congrats! You win. The word is: {secret_word}")
         break
     g = get_guess()
     while g in guessList:

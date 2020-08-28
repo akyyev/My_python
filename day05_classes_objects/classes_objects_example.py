@@ -18,34 +18,39 @@ class Movie:
         self.have_seen = have_seen
 
     def nice_print(self):
+        print("\n----------------")
         print(f"Title: {self.title}")
         print(f"Year:  {self.year}")
         print(f"IMDB score: {self.imdb_score}")
         print(f"I have seen it: {self.have_seen}")
+        print("----------------")
+
+    def __str__(self):
+        return 'With this method it will not print hashcode! toString() method in Java'
 
 
 film_1 = Movie("Life of Brian", 1979, 8.1, True)
 film_2 = Movie("The Holy Grail", 1975, 8.2, False)
 
 # print(film_1) will print some hash code
+print(film_1)
 print(film_1.title)
 print("----------------\n")
 
 # multiple ways to use methods
 Movie.nice_print(film_1) # or
-print("----------------")
+
 film_2.nice_print()
 
 
-print("----------------")
 # we can also create list of films
 films = [film_1, film_2]
 
 for each in films:
     print(f"Movie: {each.title}")
 
+print([x.title for x in films])
 
-print("----------------")
 # Creating a film using default constructor
 film_3 = Movie()
 

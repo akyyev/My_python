@@ -4,7 +4,7 @@ num1 = 0.0037 / 100
 num2 = 0.000037
 
 # even though numbers are equal it prints false, because of float numbers binary conversion
-print(num1 == num2)
+print(num1 == num2, end='....\n')
 
 if round(num1, 4) == round(num2, 4):
     print("Equal")
