@@ -17,7 +17,7 @@ print('now it is sorted: ', my_list)
 # to sort element based on index, we can use lambda functions
 my_list2 = [['car', 4, 65], ['dog', 2, 30], ['add', 3, 10], ['bee', 1, 24]]
 list2_sorted = sorted(my_list2, key=lambda item: item[1])
-print(list2_sorted)
+print('sorted based on middle element', list2_sorted)
 print('sorted based on last element', sorted(my_list2, key=lambda item: item[2]))
 
 

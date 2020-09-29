@@ -45,6 +45,7 @@ print(sky.dance())
 # Let's see how many object we've created
 print(Parrot.count)
 
+
 class MyClass:
     """This is my second class"""
     a = 10
@@ -72,5 +73,6 @@ print(MyClass.__doc__)
 # object
 obj = MyClass()
 obj.func()
+# AttributeError: 'MyClass' object has no attribute '__greeting_private'
 # obj.__greeting_private()
 obj.greeting()

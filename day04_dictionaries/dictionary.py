@@ -121,7 +121,7 @@ def create_dic():
     print(my_dict)
 
 
-create_dic()
+# create_dic()
 
 
 # Question:
@@ -142,10 +142,9 @@ create_dic()
 # g,1
 # f,1
 def frequency_of_letter(word):
-    dic = dict()
+    dic = dict()  # or dic = {}
     for letter in word:
         dic[letter] = dic.get(letter, 0) + 1
     return dic
 
-
-print(frequency_of_letter('Hello Buddy'))
+# print(frequency_of_letter('Hello Buddy'))

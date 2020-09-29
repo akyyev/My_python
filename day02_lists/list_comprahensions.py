@@ -36,6 +36,11 @@ list_of_strings = ["a", "2", "7", "zebra"]
 
 def safe_int(ls1):
     res = [int(x) if x.isdigit() else 0 for x in ls1]
+    print("If-else statement: ", res)
+
+    newRes = [number for number in res if number > 0]
+    print("List without zeros:", newRes)
+
     return res
 
 

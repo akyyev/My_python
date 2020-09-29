@@ -18,7 +18,7 @@ try:
 except ValueError as err:
     print(err, num, "Bad Value! Value needs to be between 1 and 30!")
 except ZeroDivisionError as err:
-    print(err, "Dividing with 0 is not allowed")
+    print(err, ": Dividing with 0 is not allowed")
 except:
     print("invalid input!")
 else:
