@@ -1,7 +1,7 @@
 import random
 
-words = ["salam", "eggplant", "python", "turtle", "milkyway", "computer", "galaxy", "desk", "podcast", "resolution", "yahoo",
-         "program", "dictionary", "revolution", "son", "daughter", "software", "sweethome",
+words = ["salam", "eggplant", "python", "turtle", "milkyway", "computer", "galaxy", "desk", "podcast", "resolution",
+         "yahoo", "program", "dictionary", "revolution", "son", "daughter", "software", "sweethome",
          "firetruck", "car", "food", "coronavirus", "contagious", "coding", "water", "radio",
          "break", "yunus", "plant", "flower", "sunshine", "cleaning"]
 
@@ -13,19 +13,18 @@ for i in range(len(secret_word)):
 
 
 def get_guess():
-    g = input("Guess: ")
+    guess = input("Guess: ")
     while True:
-        if len(g) > 1:
+        if len(guess) > 1:
             print("Your guess must have exactly one character!")
-            g = input("Guess: ")
-        elif g.isupper():
+        elif guess.isupper():
             print("Your guess must be a lowercase letter!")
-            g = input("Guess: ")
-        elif g.isdigit():
+        elif guess.isdigit():
             print("Your guess must be a letter, not a number!")
-            g = input("Guess: ")
         else:
-            return g
+            break
+        guess = input("Guess: ")
+    return guess
 
 
 def update_dashes(secretWord, current_state, recentGuess):
@@ -41,7 +40,6 @@ def update_dashes(secretWord, current_state, recentGuess):
 
 guesses_left = 10
 guessList = []
-
 
 while True:
     print(str(guesses_left) + " incorrect guesses left.")
